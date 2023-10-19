@@ -57,7 +57,8 @@ class SplashScreen extends StatelessWidget {
                             EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
                     child: const Text(
                       "Empezar ahora",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                   ),
                 )

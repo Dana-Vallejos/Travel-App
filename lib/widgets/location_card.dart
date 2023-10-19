@@ -8,7 +8,8 @@ class LocationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
+      elevation: 0.5,
+      shadowColor: Colors.black38,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -39,7 +40,7 @@ class LocationCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 5.0),
                   Text(
-                    "Buenos Aires, Argentina",
+                    "Lima, Perú",
                     style: TextStyle(color: Colors.grey, fontSize: 14),
                   ),
                 ],

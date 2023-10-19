@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
       home: const SplashScreen(),
     );

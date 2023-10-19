@@ -3,6 +3,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:travel_app/widgets/icon_button.dart';
 import 'package:travel_app/widgets/location_card.dart';
 import 'package:travel_app/widgets/places.dart';
+import 'package:travel_app/widgets/recommended_places.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,14 +17,12 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         foregroundColor: Colors.black,
         title: Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "Buenos días",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+              const Text("Buenos días",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               const SizedBox(height: 2),
               Text(
                 "Dana Vallejos",
@@ -47,14 +46,29 @@ class HomePage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
         children: [
-          //location
           LocationCard(),
-          SizedBox(
-            height: 24.0,
+          const SizedBox(
+            height: 15.0,
           ),
-          //categories
           Places(),
-          //recommendations
+          const SizedBox(
+            height: 15.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text("Recomendaciones",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              TextButton(
+                onPressed: () {},
+                child: const Text("Ver todos"),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          const RecommendedPlaces(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

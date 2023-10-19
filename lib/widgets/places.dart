@@ -10,13 +10,15 @@ class Places extends StatelessWidget {
     return SizedBox(
       height: 40,
       child: ListView.separated(
-        physics: BouncingScrollPhysics(),
+        physics: BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+            decelerationRate: ScrollDecelerationRate.fast),
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return Chip(
             padding: EdgeInsets.symmetric(vertical: 3, horizontal: 10),
-            backgroundColor: Colors.white10,
+            backgroundColor: Colors.white,
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
